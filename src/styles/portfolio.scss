@@ -1,0 +1,63 @@
+@import './global';
+
+.mainPortfolio{
+  @include max-width;
+  .contentWrapper{
+    @include column-start;
+    margin-bottom: $regular-margin;
+    .imagesContainer{
+      @include row;
+      @media screen and (max-width: 1023px) {
+        @include column-center;
+      }
+      background-color: $silver;
+      width: 100%;
+      margin-bottom: $regular-margin;
+      .imageWrapper {
+        width: 60%;
+        @media screen and (max-width: 1023px) {
+          width: 100%;
+        }
+        div {
+        transition: filter 0.5s; 
+        width: 100%;
+        @media screen and (max-width: 1023px) {
+          float: unset;
+        }
+          img {
+            background: #F1F1FA;
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 0; 
+          }
+          .lazy {
+            filter: blur(20px); 
+          }
+        }
+      }
+      .titleDescription{
+        @include column-center;
+        width: 40%;
+        @media screen and (max-width: 1023px) {
+          width: 100%;
+        }
+        h2{
+          background-color: $dark;
+          color: $white;
+          padding: $regular-padding;
+          margin-top: 0;
+          @media screen and (max-width: 1023px) {
+            margin-top: $small-margin;
+          }
+        }
+        p{
+          padding: 0;
+          font-size: $text;
+          margin: $regular-margin auto;
+        }
+      }
+    }
+  }
+
+}

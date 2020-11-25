@@ -1,0 +1,36 @@
+{
+  "name": "rubi-cms",
+  "version": "1.0.0",
+  "description": "express and handlebars try out",
+  "main": "app.js",
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "rebuild": "gulp rebuild",
+    "watch": "gulp"
+  },
+  "keywords": [
+    "cms",
+    "handlebars",
+    "express"
+  ],
+  "author": "rubi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "google-spreadsheet": "^3.0.13",
+    "googleapis": "^65.0.0"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-live-server": "0.0.31",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0"
+  }
+}

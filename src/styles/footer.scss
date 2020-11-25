@@ -1,0 +1,21 @@
+@import './global';
+
+.app footer{
+  background-color: $white;
+  color: $dark;
+  @media screen and (max-width: 1023px) {
+    position: fixed;
+    bottom:-0;
+  }
+  width:100%;
+  p{
+    font-size: $text;
+    width: 100%;
+    margin: unset;
+    padding: $regular-padding;
+    text-align: center;
+    @media screen and (max-width: 1023px) {
+      @include shadow(0px, 1px, 5px, 0px,rgba(38,38,38,0.4), $set:false);
+    }
+  }
+}

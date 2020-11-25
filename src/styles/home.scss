@@ -1,0 +1,47 @@
+@import './global';
+
+.mainHome {
+  @include max-width;
+  .contentWrapper{
+    width: 100%;
+    .imagesContainer{
+      .imageWrapper{
+        div{
+          margin: auto;
+          width: 90%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .actionsWrapper{
+    width: 60%;
+    margin: 0 auto;
+    @include row;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: $separator-padding;
+    @media screen and (max-width: 1023px) {
+      @include column-center;
+      justify-content: space-between;
+      width:100%;
+    }
+    .actionContainer{
+      display: inherit;
+      border-radius: $big-radius;
+      background-color: $gold;
+      width: 200px;
+      padding: $regular-padding;
+      margin: $small-margin;
+      a{
+        color:$dark;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+}

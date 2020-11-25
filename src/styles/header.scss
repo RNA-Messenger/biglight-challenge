@@ -1,0 +1,18 @@
+@import './global';
+
+.app nav{
+  background-color: $dark;
+  list-style: none;
+  @include shadow(0px, 1px, 5px, 0px,rgba(38,38,38,0.4), $set:false);
+
+  ul{
+    @include row;
+    justify-content: flex-start;
+    li{
+      padding: $regular-padding;
+      a{
+        color: $gold;
+      }
+    }
+  }
+}

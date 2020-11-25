@@ -1,0 +1,65 @@
+
+$gold: #BFA968;
+$silver: #EDEDED;
+$dark: #262626;
+$white: #FFF;
+$lightgold: #DDD2B1;
+
+$bigger-font: 2em;
+$big-font: 1.7em;
+$title: 1.4em;
+$text: 1em;
+$small-text: .7em;
+
+$max-width: 1200px;
+$small-margin: 15px;
+$regular-margin: 30px;
+
+$small-padding: 3px;
+$regular-padding: 15px;
+$medium-padding: 10px 30px;
+$big-padding: 50px 15px;
+$separator-padding: 50px 0 100px 0;
+
+$small-radius: 3px;
+$regular-radius: 5px;
+$medium-radius: 10px;
+$big-radius: 30px;
+
+@mixin max-width{
+  max-width: 1200px;
+  margin: 5% auto;
+}
+@mixin row(){
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin column-center(){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column-start(){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+
+@mixin shadow($Hlenght, $VLenght, $blur, $spread, $color, $set:false) {  
+  @if $set {
+    -webkit-box-shadow: inset $Hlenght $VLenght $blur $spread $color;
+    -moz-box-shadow: inset $Hlenght $VLenght $blur $spread $color;
+    box-shadow: inset $Hlenght $VLenght $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $Hlenght $VLenght $blur $spread $color;
+    -moz-box-shadow: $Hlenght $VLenght $blur $spread $color;
+    box-shadow: $Hlenght $VLenght $blur $spread $color;
+  }
+}

@@ -1,0 +1,45 @@
+{{> header}}
+
+<main class='main{{title}}'>
+  {{#if listExists}} 
+    <section class='sectionHeaders'>
+      <h1> {{this.data.headline}} </h1>
+      <p> {{{this.data.subheadline}}} </p>
+    </section>
+
+    <section class='contentWrapper'>
+      {{#each this.data.images}}
+      <div class='imagesContainer'>
+        <div class='imageWrapper'>
+          <div class="mobile">
+            <img class="lazy" data-src={{this.[0]}}  alt='{{title}}_image_{{@index}}' /> 
+          </div>
+          <div class="desktop">
+            <img class="lazy" data-src={{this.[1]}} alt='{{title}}_image_{{@index}}'/> 
+          </div>
+        </div>
+        {{#if ../titleDescription}}
+          <div class="titleDescription">
+            <h2>{{this.[2]}}</h2>
+            <p>{{this.[3]}}</p>
+          </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </section>
+
+  {{/if}}
+
+  {{#if actionsNeeded}}
+    <section class='actionsWrapper'>
+      <div class='actionContainer'>
+        <a href='/portfolio'> Check out my Portfolio </a>
+      </div>
+      <div class='actionContainer'>
+        <a href='/about'> Read more about me </a>
+      </div>
+    </section>
+  {{/if}}
+</main>
+
+{{> footer}}
