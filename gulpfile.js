@@ -29,12 +29,12 @@ function runServer(){
   return gls.new('./app.js').start();
 }
 
-exports.serve = runServer;
-exports.build = series(jsBuilder, styleBuilder);
-exports.clean = clean;
-exports.rebuild = series(clean, jsBuilder, styleBuilder);
+exports.serve = runServer; //runs the server
+exports.build = series(jsBuilder, styleBuilder); // builds the js and the css files
+exports.clean = clean; // clear the public directory from js files if needed
+exports.rebuild = series(clean, jsBuilder, styleBuilder); // clear files and calls both builders
 exports.default = function() {
     return watch(['src/*.js', 'src/styles/*.scss'], series(jsBuilder, styleBuilder))
-}
+} // the actions to perform under default mode
 
 

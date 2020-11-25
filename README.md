@@ -168,3 +168,8 @@ By taking advantage of the benefits of static content, Gatsby inherits several s
 ```
   Gatsby follows the PRPL architectural pattern. Gatsby sites render a static HTML version of the initial route and then load the code bundle for the page. Then immediately starts pre-caching resources for pages linked to from the initial route. When a user clicks on a link, Gatsby creates the new page on demand on the client.
   Gatsby's site refers you to a great articule [about PRPL](https://web.dev/apply-instant-loading-with-prpl/).
+
+
+#TODO:
+* Finish the gulp tasks to export js and css bundles minified and the html files.
+* Write the sheets documentation to make sure the user understands and agrees to the file structure.
