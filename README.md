@@ -23,8 +23,6 @@ In a different terminal tab but in the same directory's location type
 
 I have set it up to watch the changes in the project and build the changes observed. At the moment, I'm only building css and js files. TODO: compile all hbs files to 3 html pages.
 
-# The structure of your project
-
 # GatsbyJS questions
 
 ## Can you explain what GatsbyJS is and what the benefits of using it are?
