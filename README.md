@@ -1,4 +1,4 @@
-#How to run the app
+# How to run the app
 I will assume you have node and npm install.
 Clone the github repo with
 >
@@ -23,11 +23,11 @@ In a different terminal tab but in the same directory's location type
 
 I have set it up to watch the changes in the project and build the changes observed. At the moment, I'm only building css and js files. TODO: compile all hbs files to 3 html pages.
 
-#The structure of your project
+# The structure of your project
 
-#GatsbyJS questions
+# GatsbyJS questions
 
-##Can you explain what GatsbyJS is and what the benefits of using it are?
+## Can you explain what GatsbyJS is and what the benefits of using it are?
 Unlike the SPAs that make API requests as you run the app, Gatsby does all the data fetching, including data sourcing from local files, during build time. All this data is then used to generate static HTML, JavaScript, and CSS files. This static rendering is what makes things work faster.
 There is no complex server setup with databases, maintenance, and don’t have any scaling issues so far.
 Rather than relying on servers to generate pages dynamically, pre-render all of them on build and use CDNs for faster and smoother experience. Reduces initial load times.
@@ -51,42 +51,42 @@ These Content Management Systems (CMS) are first-class integrations with Gatsby 
     Strapi
     WordPress
 ```
-##Can you explain how you would get the data from WordPress to GatsbyJS?
+## Can you explain how you would get the data from WordPress to GatsbyJS?
 Now, I know this is mostly a copy-paste of Gatsby's guides but it's very straight forward and I had no reason not to rely on most of their explanations. I did try to summarize this in one guide.
 
-###Install the Gatsby CLI
+### Install the Gatsby CLI
 [Quick Setup](https://www.gatsbyjs.com/docs/quick-start/)
 >npm install -g gatsby-cli
 The above command installs Gatsby CLI globally on your machine.
 
-###Create a new site
+### Create a new site
 
 >gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
 
-###Change directories into site folder
+### Change directories into site folder
 
 >cd gatsby-site
 
-###Start development server
+### Start development server
 
 >gatsby develop
 Gatsby will start a hot-reloading development environment accessible by default at http://localhost:8000.
 Try editing the home page in src/pages/index.js. Saved changes will live reload in the browser.
 
-###Create a production build
+### Create a production build
 
 >gatsby build
 Gatsby will perform an optimized production build for your site, generating static HTML and per-route JavaScript code bundles.
 
-###Serve the production build locally
+### Serve the production build locally
 
 >gatsby serve
 Gatsby starts a local HTML server for testing your built site. Remember to build your site using gatsby build before using this command.
 
-###gatsby-config.js
+### gatsby-config.js
 Two things defined here initially (in the starter) are siteMetadata and plugins you can add to enable new functionalities on your site.
 
-###Gatsby Plugin: gatsby-source-wordpress-experimental
+### Gatsby Plugin: gatsby-source-wordpress-experimental
  _gatsby-source-wordpress-experimental_ is Gatsby’s plugin for sourcing data from WordPress sites using the WPGraphQL API.
  >npm install gatsby-source-wordpress-experimental
  ```
@@ -139,16 +139,16 @@ Two things defined here initially (in the starter) are siteMetadata and plugins 
 ```
 Options related to authentication goes in here.
 
-###Using WordPress data
+### Using WordPress data
 
 Once your source plugin is pulling data, you can construct your site pages by implementing the createPages API in gatsby-node.js. When this is called, your data has already been fetched and is available to query with GraphQL. Gatsby uses that data to ”automatically infer a GraphQL schema” that you can query against.
 
-###Configuring the plugin
+### Configuring the plugin
 In the gatsby-config.js file that we mentioned before add your WordPress site’s url
 
 _All other config is optional but recommended._
 
-##Can you describe why GatsbyJS makes a site secure?
+## Can you describe why GatsbyJS makes a site secure?
 >When you ship everything to the browser, the user can access everything.
 With server-side rendering, the client browser never needs to directly access them.
 The entire front end is prebuilt into static pages and assets during a build process reducing costs and risks.
@@ -158,7 +158,7 @@ Because Gatsby deliver static pages, our data an app are fully secure in the ser
 By taking advantage of the benefits of static content, Gatsby inherits several security principles.
 [Jamstack](https://jamstack.org/)
 
-##What is a PRPL?
+## What is a PRPL?
 ```
   PRPL stands for:
   **P**ush critical resources for the initial URL route using <link preload> and HTTP/2.

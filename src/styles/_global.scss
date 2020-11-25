@@ -1,3 +1,4 @@
+// for faster changes and scalability, declare most used values in a global
 
 $gold: #BFA968;
 $silver: #EDEDED;
@@ -26,6 +27,7 @@ $regular-radius: 5px;
 $medium-radius: 10px;
 $big-radius: 30px;
 
+// add some mixins to wirte less sass code
 @mixin max-width{
   max-width: 1200px;
   margin: 5% auto;

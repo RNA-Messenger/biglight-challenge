@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log('holaaaaaa');
-  var lazyloadImages;      
+  let lazyloadImages;   
+   //IntersectionObserver: detect when an element enters the viewport   
   if ("IntersectionObserver" in window) {
     lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
+    let imageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
+        //isIntersecting: get URL from data-src and move to src attribute to trigger the image load
         if (entry.isIntersecting) {
-          var image = entry.target;
+          let image = entry.target;
           image.src = image.dataset.src;
           console.log(image.dataset.src);
           image.classList.remove("lazy");
@@ -19,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function() {
       imageObserver.observe(image);
     });
   } else {  
-    var lazyloadThrottleTimeout;
+    let lazyTimeout;
     lazyloadImages = document.querySelectorAll(".lazy");
     
     function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
+      if(lazyTimeout) {
+        clearTimeout(lazyTimeout);
       }    
 
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
+      lazyTimeout = setTimeout(function() {
+        let scrollTop = window.pageYOffset;
         lazyloadImages.forEach(function(img) {
             if(img.offsetTop < (window.innerHeight + scrollTop)) {
               img.src = img.dataset.src;

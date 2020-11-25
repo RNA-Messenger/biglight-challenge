@@ -8,8 +8,10 @@ const home = require('./src/routes/home');
 const about = require('./src/routes/about');
 const portfolio = require('./src/routes/portfolio');
 
+// get the port to run the app
 const port = process.env.PORT;
 
+// change the extension name to make it shorter
 const hbsx = handlebars.create({
   layoutsDir: __dirname + '/src/views/layouts',
   extname: 'hbs',
@@ -19,11 +21,15 @@ const hbsx = handlebars.create({
 
 app.set('view engine', 'hbs');
 app.engine('hbs', hbsx.engine)
+// setting the engine above to use handlebars
 
+// making available the directories to use
+// Express looks up the files relative to the static directory
 app.use('/static', express.static(__dirname + '/src'));
 app.use('/static', express.static(__dirname + '/public'));
 
 app.set('views', __dirname + '/src/views');
+
 app.use('/', home);
 app.use('/portfolio', portfolio);
 app.use('/about', about);

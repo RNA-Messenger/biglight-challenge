@@ -12,12 +12,14 @@
       <div class='imagesContainer'>
         <div class='imageWrapper'>
           <div class="mobile">
+            {{!-- I'm creating an alt value for good practices --}}
             <img class="lazy" data-src={{this.[0]}}  alt='{{title}}_image_{{@index}}' /> 
           </div>
           <div class="desktop">
             <img class="lazy" data-src={{this.[1]}} alt='{{title}}_image_{{@index}}'/> 
           </div>
         </div>
+        {{!-- if there is extra data to show, render --}}
         {{#if ../titleDescription}}
           <div class="titleDescription">
             <h2>{{this.[2]}}</h2>
@@ -30,6 +32,7 @@
 
   {{/if}}
 
+{{!-- this is only shown in the homepage --}}
   {{#if actionsNeeded}}
     <section class='actionsWrapper'>
       <div class='actionContainer'>
