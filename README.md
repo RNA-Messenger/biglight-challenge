@@ -1,7 +1,7 @@
 # How to run the app
 I will assume you have node and npm install.
 Clone the github repo with
->
+> git clone https://github.com/RNA-Messenger/biglight-challenge.git
 
 Open the terminal and make sure you are at the root of the project, where the gulpfile.js is, and run 
 > npm install
